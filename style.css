@@ -1,6 +1,5 @@
 body {
   font-family: 'Jua', sans-serif;
-  background-color: #ffffff;
   box-sizing: border-box;
   color: #35465d;
 }
@@ -41,9 +40,6 @@ body {
 .file-upload-content {
   display: none;
   text-align: center;
-}
-#loading {
-  display: none;
 }
 
 .file-upload-input {
@@ -350,4 +346,18 @@ body {
 }
 .made-by{
   font-size: 1rem;
+}
+.ad-banner3{
+  margin: 0 auto;
+  max-width: 320px;
+}
+.spinner-border m-5{
+  margin: 0 auto;
+}
+.re{
+  font-size: 2rem;
+}
+.dark-mode .dark .daark{
+  background-color: #000;
+  color: white;
 }
