@@ -41,7 +41,7 @@
         <a id = "fruit" class="navbar-brand" href="#">과즙미 테스트</a>
         <button id = "btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span id = "ham" class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
@@ -49,19 +49,26 @@
                     <a class="nav-link" href="https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg"><span id = "help">도움 주신 분</span></a>
                 </li>
 
-                <input type="checkbox" name="chk_info" class="dark-mode dark daark" id="dark-mode"><span id = "dar">dark mode</span>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="dark">
+                    <label class="form-check-label" for="defaultCheck1">
+                      <p id = "p">dark mode</p>
+                    </label>
+                  </div>
                 <script>
                     $(document).ready(function () {
-                        $("#dark-mode").change(function () {
-                            if ($("#dark-mode").is(":checked")) {
+                        $("#dark").change(function () {
+                            if ($("#dark").is(":checked")) {
                                 console.log("체크박스 체크했음!");
                                 var body = document.getElementById("body")
                                 var a = document.getElementById("fruit")
                                 var title = document.getElementById("title")
                                 var title2 = document.getElementById("title2")
-                                var dar = document.getElementById("dar")
+                                var dar = document.getElementById("dark")
                                 var help = document.getElementById("help")
                                 var file = document.getElementById("file")
+                                var p = document.getElementById("p")
+                                var ham = document.getElementById("ham")
                                 body.style.backgroundColor = "black"
                                 a.style.color = "white"
                                 title.style.color = "white"
@@ -69,15 +76,19 @@
                                 dar.style.color = "white"
                                 help.style.color = "white"
                                 file.style.color = "black"
+                                p.style.color = "white"
+                                ham.style.color = "white"
                             } else {
                                 console.log("체크박스 체크 해제!");
                                 var body = document.getElementById("body")
                                 var a = document.getElementById("fruit")
                                 var title = document.getElementById("title")
                                 var title2 = document.getElementById("title2")
-                                var dar = document.getElementById("dar")
+                                var dar = document.getElementById("dark")
                                 var help = document.getElementById("help")
                                 var file = document.getElementById("file")
+                                var p = document.getElementById("p")
+                                var ham = document.getElementById("ham")
                                 body.style.backgroundColor = "white"
                                 a.style.color = "#35465d"
                                 title.style.color = "#35465d"
@@ -85,6 +96,8 @@
                                 dar.style.color = "#35465d"
                                 help.style.color = "#35465d"
                                 file.style.color = "white"
+                                p.style.color = "#35465d"
+                                ham.style.color = "#000000"
                             }
                         });
                     });
